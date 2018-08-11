@@ -1,0 +1,275 @@
+
+          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
+              xFactor: 0.05,
+              yFactor: 0,
+              springSettings: {
+                stiffness: 50,
+                damping: 30
+              }
+            }}>
+            <img src={require('./imgs/bg4.png')} alt="Parallax Layer"></img>
+          </ParallaxMousemove.Layer>
+          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
+              xFactor: 0.15,
+              yFactor: 0,
+              springSettings: {
+                stiffness: 50,
+                damping: 30
+              }
+            }}>
+            <img src={require('./imgs/bg5.png')} alt="Parallax Layer"></img>
+          </ParallaxMousemove.Layer>
+          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
+              xFactor: 0.25,
+              yFactor: 0.025,
+              springSettings: {
+                stiffness: 50,
+                damping: 30
+              }
+            }}>
+            <img src={require('./imgs/bg7.png')} alt="Parallax Layer"></img>
+          </ParallaxMousemove.Layer>
+          <ParallaxMousemove.Layer layerStyle={style.bgLayerStyle} config={{
+              xFactor: 0.4,
+              yFactor: 0.05,
+              springSettings: {
+                stiffness: 50,
+                damping: 30
+              }
+            }}>
+            <img src={require('./imgs/bg6.png')} alt="Parallax Layer"></img>
+          </ParallaxMousemove.Layer>
+
+
+
+            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
+                xFactor: 0.2,
+                yFactor: 0,
+                springSettings: {
+                  stiffness: 50,
+                  damping: 30
+                }
+              }}>
+              <img src={require('./imgs/bg1.png')} alt="Parallax Layer"></img>
+            </ParallaxMousemove.Layer>
+            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
+                xFactor: 0.3,
+                yFactor: 0,
+                springSettings: {
+                  stiffness: 50,
+                  damping: 30
+                }
+              }}>
+              <img src={require('./imgs/bg2.png')} alt="Parallax Layer"></img>
+            </ParallaxMousemove.Layer>
+            <ParallaxMousemove.Layer layerStyle={style.infoLayerStyle} config={{
+                xFactor: 0.4,
+                yFactor: 0,
+                springSettings: {
+                  stiffness: 50,
+                  damping: 30
+                }
+              }}>
+              <img src={require('./imgs/bg3.png')} alt="Parallax Layer"></img>
+            </ParallaxMousemove.Layer>
+          
+            <h1 style={style.header}>REACT-PARALLAX-MOUSEMOVE</h1>
+            <p style={style.paragraph}>A simple react component for creating a parallax effect connected to the mousemove event.</p>
+            <a href="https://www.npmjs.com/package/react-parallax-mousemove" style={style.button}>npm install react-parallax-mousemove --save</a>
+
+            
+          <ReactModal 
+             isOpen={this.state.showModalAbout}
+             contentLabel="About"
+             onRequestClose={this.handleCloseModal}
+             shouldCloseOnOverlayClick={true}
+          >
+            <span aria-label="Close About" style={style.modalClose} onClick={this.handleCloseModal}>&times;</span>
+            <p style={style.paragraph}><b>President University Student Council</b> is the student legislative body at university level of President University. PUSC is under coordination of Student Affairs Department, which is under Vice Rector III (Vice Rector for Student and Alumni Affairs).</p>
+            <p style={style.paragraph}>PUSC consists of Board of Directors, Members of Commissions, and Members of Internal Bureau.<br/>
+            <a onClick={this.handleOpenModalB} style={style.link}>Board of Directors</a> of PUSC consists of Chairperson and Vice Chairperson, Secretary and Treasurer, Head of Commission I to IV and Head of Internal Bureau.</p>
+            <p style={style.paragraph}><b>Functions</b><br/>President University Student Council has 5 functions:
+              <ul>
+                <li><a onClick={this.handleOpenModalR} style={style.link}>Research</a>: Conduct research regarding student prosperity and present it to the management of President University.</li>  
+                <li><b>Aspiration</b>: Collect, process and deliver the students' aspiration regarding student prosperity at university level.</li>  
+                <li><b>Mediation</b>: Become mediator between students, student organizations, and management of President University.</li>  
+                <li><b>Legislation</b>: Establish laws and regulations for student organizations.</li>  
+                <li><b>Supervision</b>: Supervise and evaluate the performance of the student executive body at university level of President University.</li>  
+              </ul>
+            </p>
+            <p style={style.paragraph}><b>Vision</b><br/>Become the reliable mediator for students, student organizations, and management of President Univeristy to create progressive change for President University.</p>
+            <p style={style.paragraph}><b>Missions</b>
+              <ol>
+                <li>Strengthen the internal relations through synergy and deliberation.</li>
+                <li>Collaborate with the Management of President University to create conducive environment for student activities.</li>
+                <li>Bring continuous improvements through aspiration for students' welfare.</li>
+                <li>Foster mutual growth and complementary relations with student organizations.</li>
+                <li>Enhance the quality of student events and activities through accountability, trust, and constructive criticism.</li>
+                <li>Keep peace, maintain justice and promote sustainability through law and order.</li>
+              </ol>
+            </p>
+          </ReactModal>
+          <ReactModal 
+             isOpen={this.state.showModalCOMM1}
+             contentLabel="COMM1"
+             onRequestClose={this.handleCloseModalR}
+             shouldCloseOnOverlayClick={true}
+          >
+            <span aria-label="Close Commission 1" style={style.modalClose} onClick={this.handleCloseModalR}>&times;</span>
+            <img src={require('./imgs/COMM1.png')} style={style.img}></img>
+          </ReactModal>
+          <ReactModal 
+             isOpen={this.state.showModalBOD}
+             contentLabel="BOD"
+             onRequestClose={this.handleCloseModalB}
+             shouldCloseOnOverlayClick={true}
+          >
+            <span aria-label="Close BOD" style={style.modalClose} onClick={this.handleCloseModalB}>&times;</span>
+            <img src={require('./imgs/BOD.png')} style={style.img}></img>
+          </ReactModal>
+
+          
+
+        .pusc-progress-indicator.available {
+        opacity: 0;
+        }
+        .pusc-progress-indicator {
+        background-color: #fff;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        opacity: 1;
+        pointer-events: none;
+        -webkit-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+        -moz-transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+        transition: opacity cubic-bezier(.4, 0, .2, 1) 436ms;
+        z-index: 9999;
+        }
+        .insp-logo-frame {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        justify-content: center;
+        -webkit-animation: fadein 436ms;
+        -moz-animation: fadein 436ms;
+        animation: fadein 436ms;
+        height: 98%;
+        }
+        .insp-logo-frame-img{
+        width: 112px;
+        height: 112px;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        align-self: center;
+        border-radius: 50%;
+        }
+        .pusc-progress-indicator-head {
+        background-color: #c6dafc;
+        height: 4px;
+        overflow: hidden;
+        position: relative;
+        }
+        .pusc-progress-indicator .first-indicator, .pusc-progress-indicator .second-indicator {
+        background-color: #056D8B;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: absolute;
+        -webkit-transform-origin: left center;
+        -moz-transform-origin: left center;
+        transform-origin: left center;
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        transform: scaleX(0);
+        }
+        .pusc-progress-indicator .first-indicator {
+        -webkit-animation: first-indicator 2000ms linear infinite;
+        -moz-animation: first-indicator 2000ms linear infinite;
+        animation: first-indicator 2000ms linear infinite;
+        }
+        .pusc-progress-indicator .second-indicator {
+        -webkit-animation: second-indicator 2000ms linear infinite;
+        -moz-animation: second-indicator 2000ms linear infinite;
+        animation: second-indicator 2000ms linear infinite;
+        }
+        .pusc-progress-indicator .insp-logo {
+        animation: App-logo-spin infinite 20s linear;
+        border-radius: 50%;
+        -webkit-align-self: center;
+        -moz-align-self: center;
+        align-self: center;
+        }
+        @keyframes App-logo-spin {
+        from {
+        transform: rotate(0deg);
+        }
+        to {
+        transform: rotate(360deg);
+        }
+        }
+        @-webkit-keyframes fadein {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+        ;
+        }
+        @-moz-keyframes fadein {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+        ;
+        }
+        @keyframes fadein {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+        ;
+        }
+        @keyframes first-indicator {
+        0% {
+        transform: translate(0%) scaleX(0);
+        }
+        25% {
+        transform: translate(0%) scaleX(0.5);
+        }
+        50% {
+        transform: translate(25%) scaleX(0.75);
+        }
+        75% {
+        transform: translate(100%) scaleX(0);
+        }
+        100% {
+        transform: translate(100%) scaleX(0);
+        }
+        ;
+        }
+        @keyframes second-indicator {
+        0% {
+        transform: translate(0%) scaleX(0);
+        }
+        60% {
+        transform: translate(0%) scaleX(0);
+        }
+        80% {
+        transform: translate(0%) scaleX(0.6);
+        }
+        100% {
+        transform: translate(100%) scaleX(0.1);
+        }
+        ;
+        }

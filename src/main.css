@@ -1,0 +1,266 @@
+body {
+    font-family: Open Sans Condensed;
+    margin: 0px;
+    cursor: url(ccursor.png), auto;
+}
+
+.menu {
+    position: absolute;
+    float: right;
+    left: 25px;
+    bottom: 25px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px -5px #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu ul {
+    margin: 0;
+}
+
+.menu li {
+    display: block;
+    padding: 1rem;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
+}
+  
+.menu li a {
+    color: #0D47A1;
+}
+  
+.menu li a:hover {
+    color: red;
+}
+
+.menu li:hover,
+.menu li:focus-within {
+    /* background-color: #0D47A1; */
+    color: red;
+    /* cursor: pointer; */
+}
+
+.menu li:focus-within a {
+    color: red;
+  outline: none;
+}
+
+.sub-menu ul li ul {
+    visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+    position: absolute;
+    float: left;
+    right: 50px;
+  transition: all 0.5s ease;
+  display: none;
+}
+
+.sub-menu ul li:hover > ul,
+.sub-menu ul li:focus-within > ul,
+.sub-menu ul li ul:hover,
+.sub-menu ul li ul:focus {
+    position: absolute;
+    float: left;
+    right: 50px;
+   background-color: #0D47A1;
+    color: #fff;
+   visibility: visible;
+   opacity: 1;
+   display: block;
+}
+
+.sub-menu ul li ul li {
+    clear: both;
+    width: 100%;
+}
+
+.list-item {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.list-item:last-child {
+    margin-bottom: 0;
+}
+
+.transition-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+.transition-wrapper .transition-item {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.detail-page {
+    overflow: auto;
+    box-sizing: border-box;
+    padding: 20px;
+    height: 100vh;
+    /* background-color: #03a9f4; */
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.detail-page.transition-appear {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.detail-page.transition-appear.transition-appear-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.detail-page.transition-leave {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.detail-page.transition-leave.transition-leave-active {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+}
+
+.home-page {
+    overflow: auto;
+    transition: transform 0.5s, opacity 0.5s;
+    transform: translate3d(0, 0, 0);
+}
+
+.home-page.transition-appear {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.home-page.transition-appear.transition-appear-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.home-page.transition-leave {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.home-page.transition-leave.transition-leave-active {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+}
+
+.outter {
+    background: url(imgs/puscedit.jpg);
+    background-position: center;
+    background-size: cover;
+    width:100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.inner {
+    width: 700;
+    height: 500;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.button {
+    text-transform: uppercase;
+    border-radius: 100px;
+    box-shadow: 0 5px 15px -5px #222;
+    background: white;
+    text-decoration: none;
+    color: #0D47A1;
+    text-align: center;
+    margin-top: 60%;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+  
+.button2 {
+    text-transform: uppercase;
+    border-radius: 100px;
+    box-shadow: 0 5px 15px -5px #222;
+    background: #000;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 20%;
+    font-size: 25px;
+    width: 60%;
+    font-weight: bold;
+    display: block;
+}
+
+.logo {
+    height: 20%;
+    position: absolute;
+    margin:auto;
+    left: 0;
+    right: 0;
+    top: 5;
+    border-radius: 100%;
+    box-shadow: 0 5px 15px -15px #222;
+}
+
+.info-layer-style {
+    position: relative;
+    margin-top: -60px;
+  }
+
+.logo-layer-style {
+    position: relative;
+    height: 100%;
+}
+
+.bg-layer-style {
+    position: absolute;
+    height: 100%;
+    transform: translate(-15%, 17%);
+}
+
+.page-title { 
+    position: relative;
+    font-size: 2.5rem;
+    font-weight: bold;
+    left: 40%;
+    color: #0D47A1;
+}
+
+@media only screen and (max-width: 991px) {
+
+    .button, .button2 {
+        font-size: 15px;
+        width: 40%;
+        margin-top: 55%;
+        margin-left: 2.5%;
+    }
+
+    .button2 {
+        font-size: 15px;
+        width: 35%;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+
+    .page-title { 
+        display: none;
+    }
+
+}
